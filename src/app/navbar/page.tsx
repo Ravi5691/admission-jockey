@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar: React.FC = () => {
     return (
-        <nav className=" py-8 px-20 text-white flex justify-between items-center">
+        <nav className=" py-8 text-white flex justify-between items-center">
             <div className="text-lg font-bold">Admission Jockey</div>
             <button className="px-6 py-2 rounded-lg font-semibold text-white text-base 
                bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] 

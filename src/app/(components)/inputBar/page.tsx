@@ -30,7 +30,7 @@ const InputBar: React.FC = () => {
                 value={inputValue}
                 onChange={handleInputChange}
                 placeholder="Whats your next discovery?"
-                className='text-lg'
+                className='text-lg outline-none'
                 style={{ flex: 1, padding: '8px', borderRadius: '4px', }}
             />
             

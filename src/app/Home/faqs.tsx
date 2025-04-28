@@ -15,28 +15,23 @@ interface FaqItem {
 
 const faqItems: FaqItem[] = [
     {
-        question: "Are my payments secure?",
+        question: "How does Alumna.ai work?",
         answer:
-            "Yes, your payment details are fully secure. We use (If using any technology or simply yes answer) to protect your financial information during every transaction, ensuring that your data is always safe.",
+            "It uses a powerful foundation AI model trained on educational journeys, counsellor advice, and student data to give personalized recommendations in seconds",
     },
     {
-        question: "Can I track the progress of my project?",
+        question: "Is it really free?",
         answer:
-            "Yes, you can easily track your project’s progress. Our platform allows you to monitor milestones, set deadlines, and receive regular updates from freelancers to ensure everything stays on schedule.",
+            "",
     },
     {
-        question: "Will the data that I share be kept confidential?",
+        question: "Who is it for?",
         answer:
-            "Absolutely. We prioritize your privacy, and all data shared is protected. We have strict confidentiality protocols in place, ensuring your sensitive information remains secure and is only used for the project at hand.",
+            "",
     },
     {
-        question: "What is Krip?",
+        question: "How is this different from search engines or portals?",
         answer: "", // can be filled later
-    },
-    {
-        question: "What industries does Krip.ai support?",
-        answer:
-            "Krip.ai supports a wide range of industries, including technology, healthcare, finance, marketing, e-commerce, education, and more. We connect you with freelancers experienced across various sectors to meet your specific needs.",
     },
 ];
 
@@ -49,56 +44,25 @@ const Faq: React.FC = () => {
                         <h2 className="text-[40px] font-medium">FAQs</h2>
                     </div>
 
-                    <Accordion type="single" collapsible className="space-y-4 mt-12">
+                    <Accordion type="single" collapsible className="space-y-4 mt-20">
                         {faqItems.map((item, index) => (
                             <AccordionItem
                                 value={`item-${index}`}
                                 key={index}
-                                className="border-b border-gray-700 group"
+                                className="fancy-border mx-auto pb-2"
                             >
-                                <AccordionTrigger
-                                    className="text-left text-base lg:text-lg font-medium text-white hover:no-underline flex items-center justify-between"
-                                >
+                                <AccordionTrigger className="text-left text-base lg:text-lg font-medium text-white hover:no-underline flex items-center justify-between">
                                     <span>{item.question}</span>
-
-                                    {/* Plus to Cross transition */}
-                                    <div className="relative h-5 w-5">
-                                        {/* Plus Icon */}
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="absolute inset-0 h-5 w-5 transition-opacity duration-300 group-data-[state=open]:opacity-0"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="#a855f7"
-                                            strokeWidth="2"
-                                        >
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
-                                        </svg>
-
-                                        {/* Cross Icon */}
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="absolute inset-0 h-5 w-5 opacity-0 transition-opacity duration-300 group-data-[state=open]:opacity-100"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="#a855f7"
-                                            strokeWidth="2"
-                                        >
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                        </svg>
-                                    </div>
-
                                 </AccordionTrigger>
 
-                                <AccordionContent className="text-gray-400">
+                                <AccordionContent className="text-gray-400 mt-2">
                                     {item.answer || "Answer coming soon..."}
                                 </AccordionContent>
+
+                                {/* <div className="h-[2px] w-6xl mt-4 bg-[radial-gradient(closest-side,#A07DF1_0%,#F69DBA_50%,transparent_100%)]" /> */}
                             </AccordionItem>
                         ))}
                     </Accordion>
-
-
-
                 </div>
             </section>
         </div>

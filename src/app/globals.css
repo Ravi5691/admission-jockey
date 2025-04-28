@@ -139,3 +139,13 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* line design for faqs */
+.fancy-border {
+  border-bottom-width: 2px;
+  border-image: radial-gradient(closest-side, #8960ea 0%, #ec9fb9 50%, transparent 100%) 1;
+  border-image-slice: 35;
+  border-style: solid;
+  width: auto; /* match w-64 */
+  margin-top: 1.5rem; /* mt-6 */
+}

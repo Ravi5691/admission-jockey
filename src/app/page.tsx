@@ -3,11 +3,14 @@ import InputBar from "./(components)/inputBar/page";
 import HowAjWork from "./Home/howAjWork";
 import Faq from "./Home/faqs";
 import KeyFeatures from "./Home/features";
+import Footer from "./Home/footer";
+import Navbar from "./navbar/page";
 // import Partners from "./(components)/partersBar/page";
 
 export default function Home() {
   return (
     <div className="px-20">
+      <Navbar />
       <div className="flex item-center justify-between my-30 gap-5">
         <div className="flex flex-col flex-1 justify-center gap-10">
           <h1 className="text-[40px] tracking-wide leading-13 font-semibold">Your AI-Powered Guide to <span className="text-transparent  bg-clip-text bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] ">Education</span>, <span className="text-transparent  bg-clip-text bg-[linear-gradient(90deg,#A07DF1,#F69DBA)]">Careers</span> & <span className="text-transparent  bg-clip-text bg-[linear-gradient(90deg,#A07DF1,#F69DBA)]">Everything</span> in Between</h1>
@@ -29,14 +32,14 @@ export default function Home() {
         </div>
       </div>
 
-      <KeyFeatures/>
+      <KeyFeatures />
       {/* <Partners /> */}
       <div className="my-30">
         <HowAjWork />
       </div>
 
       <Faq />
-      {/* <div className="h-[3px] w-full bg-[radial-gradient(closest-side,#A07DF1_0%,#F69DBA_50%,transparent_100%)]" /> */}
+      <Footer />
 
     </div>
   );
