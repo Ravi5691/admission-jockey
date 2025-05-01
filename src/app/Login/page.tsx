@@ -21,26 +21,27 @@ export default function LoginPage() {
                         <div className="h-[1px] w-1/2 bg-[radial-gradient(closest-side,#FFFFFF_20%,#FFFFFF_70%,transparent_100%)]" />
                     </div>
                     <div className="flex flex-col gap-10 w-3/4">
+                        <form action="/Login/otp" method="get">
+                            <div className="flex flex-col gap-3">
+                                <label htmlFor="email" className="text-white text-sm font-medium">
+                                    Email ID / Phone Number
+                                </label>
 
-                        <div className="flex flex-col gap-3">
-                            <label htmlFor="email" className="text-white text-sm font-medium">
-                                Email ID / Phone Number
-                            </label>
+                                {/* Email Input */}
+                                <input
+                                    id="email"
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    className="w-full px-4 py-3 bg-gradient-to-b from-[#ffffff0d] border-t border-[#ffffff14] to-[#ffffff04] rounded-lg"
+                                />
+                            </div>
 
-                            {/* Email Input */}
-                            <input
-                                id="email"
-                                type="email"
-                                placeholder="Enter your email"
-                                className="w-full px-4 py-3 bg-gradient-to-b from-[#ffffff0d] border-t border-[#ffffff14] to-[#ffffff04] rounded-lg"
-                            />
-                        </div>
-
-                        {/* Continue Button */}
-                        <button className="w-full py-3 text-white font-semibold rounded-md 
+                            {/* Continue Button */}
+                            <button className="w-full py-3 mt-7 text-white font-semibold rounded-md 
                           bg-[linear-gradient(90deg,#F69DBA,#A07DF1)] hover:brightness-110 hover:text-shadow active:scale-95 transition-all duration-200">
-                            Continue
-                        </button>
+                                Continue
+                            </button>
+                        </form>
 
                         {/* Already have an account line */}
                         <p className="text-center text-white text-sm">

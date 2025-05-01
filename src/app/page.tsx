@@ -1,10 +1,10 @@
 import Image from "next/image";
-import InputBar from "./(components)/inputBar/page";
-import HowAjWork from "./Home/howAjWork";
-import Faq from "./Home/faqs";
-import KeyFeatures from "./Home/features";
-import Footer from "./Home/footer";
-import Navbar from "./navbar/page";
+import InputBar from "./(components)/inputBar";
+import HowAjWork from "./HomeComponents/howAjWork";
+import Faq from "./HomeComponents/faqs";
+import KeyFeatures from "./HomeComponents/features";
+import Footer from "./HomeComponents/footer";
+import Navbar from "./navbar/homeNav";
 // import Partners from "./(components)/partersBar/page";
 
 export default function Home() {

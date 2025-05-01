@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
                border-t border-[#ffffff36] 
                shadow-[0_0_11px_0_rgba(160,125,241,0.3)] 
                hover:opacity-90 transition-all duration-300">
-                Login
+                <a href="../Login">Login</a>
             </button>
         </nav>
     );
