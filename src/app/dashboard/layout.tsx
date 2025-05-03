@@ -25,9 +25,9 @@ export default function DashboardLayout({
         </div>
       </header>
       <main className="flex-grow p-4">{children} </main>
-      <footer className=" text-white text-center p-4">
+      {/* <footer className=" text-white text-center p-4">
         <p>&copy; 2023 Admission Jockey</p>
-      </footer>
+      </footer> */}
     </div>
   );
 }

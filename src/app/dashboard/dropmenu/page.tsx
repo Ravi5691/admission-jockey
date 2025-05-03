@@ -14,7 +14,7 @@ export default function DropMenu() {
         <div>
             <DropdownMenu>
                 <DropdownMenuTrigger><AlignJustify/></DropdownMenuTrigger>
-                <DropdownMenuContent className="mt-4 bg-green-50">  
+                <DropdownMenuContent className="mt-4 bg-gradient-to-b text-white from-[#000000] via-[#2f2f2f3e] to-[#292929af] border-t border-[#ffffff28]">  
                 <DropdownMenuItem>
                         <a href="/dashboard" className="flex items-center">
                             <MdDashboard className="text-xl" />

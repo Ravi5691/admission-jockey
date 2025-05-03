@@ -38,7 +38,7 @@ export default function LoginPage() {
 
                             {/* Continue Button */}
                             <button className="w-full py-3 mt-7 text-white font-semibold rounded-md 
-                          bg-[linear-gradient(90deg,#F69DBA,#A07DF1)] hover:brightness-110 hover:text-shadow active:scale-95 transition-all duration-200">
+                          bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] hover:brightness-110 hover:text-shadow active:scale-95 transition-all duration-200">
                                 Continue
                             </button>
                         </form>
