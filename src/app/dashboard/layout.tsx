@@ -1,4 +1,5 @@
 import DropMenu from "./dropmenu/page";
+import { BellRing, User } from "lucide-react";
 
 export default function DashboardLayout({
   children,
@@ -19,8 +20,10 @@ export default function DashboardLayout({
                border-t border-[#ffffff36] 
                shadow-[0_0_11px_0_rgba(160,125,241,0.3)] 
                hover:opacity-90 transition-all duration-300">New Chat</button>
-                <button className="rounded-full h-10 w-10 bg-amber-100"></button>
-                <button className="rounded-full h-10 w-10 bg-amber-100"></button>
+                <button className="rounded-full flex items-center justify-center h-10 w-10 p-[1px] bg-[linear-gradient(90deg,#A07DF1,#F69DBA)]">
+                  <div className="rounded-full h-full w-full bg-black flex justify-center items-center"><BellRing className="h-[18px] text-[#f2acc3] "/></div>
+                </button>
+                <button className="rounded-full h-10 w-10 bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] flex items-center justify-center  "><User/></button>
             </div>
         </div>
       </header>

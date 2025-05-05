@@ -1,8 +1,61 @@
-export default function Alumini() {
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Star } from "lucide-react";
+import InputBar from "@/app/(components)/inputBar";
+
+const AlumniCard = () => (
+    <Card className="bg-gradient-to-b from-[#111] to-[#000] border border-zinc-800 text-white rounded-xl shadow-md">
+        <CardContent className="px-5 py-5 flex flex-col items-center text-center gap-4">
+            <div className="flex items-center justify-around w-full gap-5">
+                <div className="w-20 h-20 flex-1"> <div className="w-20 h-20 bg-zinc-300 rounded-full "></div> </div>
+                <div className="text-left flex-2">
+                    <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-[linear-gradient(90deg,#A07DF1,#F69DBA)]">Aarav Sharma</h3>
+                    <p className=" text-zinc-400">2023 Passout</p>
+                </div>
+            </div>
+
+            <p className="text-sm text-left text-zinc-300">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div className="flex items-center justify-between w-full mt-2">
+                <div className=" flex flex-col gap-2"><div className="flex items-center gap-1 text-[#D0A3F8]">
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 text-zinc-600" />
+                    <Star className="w-4 h-4 text-zinc-600" />
+                    <Star className="w-4 h-4 text-zinc-600" />
+                </div>
+                    <p className="text-xs text-zinc-500">30 connected uptil now</p>
+                </div>
+                <button className="rounded-[5px] flex items-center justify-center w-20 h-10 text-sm p-[1px] bg-[linear-gradient(90deg,#A07DF1,#F69DBA)]">
+                  <div className="rounded-[5px] h-full w-full bg-black flex justify-center items-center">View</div>
+                </button>
+
+            </div>
+        </CardContent>
+    </Card>
+);
+
+const AlumniCardGrid = () => {
     return (
-        <div className="flex flex-col items-center justify-center ">
-            <h1 className="text-2xl font-bold">Alumini</h1>                
-            <p className="mt-4 text-gray-600">This is the Alumini page.</p>
+        <div className="max-h-screen flex flex-col justify-center w-full items-center bg-black px-4 text-white text-center relative mt-10">
+            <h1 className="text-2xl md:text-3xl font-bold mb-2">
+                Graphic Era, Dehradun Alumnis
+            </h1>
+            <h2 className="text-6xl font-bold text-transparent bg-clip-text bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] mb-2">800</h2>
+            <p className="text-zinc-400 text-lg mb-10">Results</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <AlumniCard />
+                <AlumniCard />
+                <AlumniCard />
+            </div>
+            <div className="w-6xl fixed bottom-8">
+                <InputBar />
+            </div>
+
         </div>
-    )
-}
+    );
+};
+
+export default AlumniCardGrid;
