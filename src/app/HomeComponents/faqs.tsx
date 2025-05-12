@@ -37,14 +37,14 @@ const faqItems: FaqItem[] = [
 
 const Faq: React.FC = () => {
     return (
-        <div className="min-h-screen text-white relative">
-            <section className="relative z-10 py-20">
+        <div className="lg:min-h-screen text-white relative">
+            <section className="relative z-10 lg:py-20 py-15">
                 <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-5xl">
                     <div className="text-center mb-12">
-                        <h2 className="text-[40px] font-medium">FAQs</h2>
+                        <h2 className="lg:text-[40px] text-[20px] font-medium">FAQs</h2>
                     </div>
 
-                    <Accordion type="single" collapsible className="space-y-4 mt-20">
+                    <Accordion type="single" collapsible className="space-y-4 lg:mt-20 mt-10">
                         {faqItems.map((item, index) => (
                             <AccordionItem
                                 value={`item-${index}`}

@@ -29,12 +29,15 @@ export default function Home() {
 
       <KeyFeatures />
       {/* <Partners /> */}
-      <div className="my-30">
+      <div className="lg:my-30 my-10">
         <HowAjWork />
       </div>
 
       <Faq />
-      <Footer />
+      <div className="mt-20">
+        <Footer />
+      </div>
+      
 
     </div>
   );

@@ -6,12 +6,12 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function KeyFeatures() {
   return (
-    <section className="bg-black text-white max-h-screen py-16 ">
-      <h2 className="text-4xl font-bold text-center mb-20">Key Features</h2>
+    <section className="bg-black text-white min-h-screen py-16 ">
+      <h2 className="lg:text-4xl text-[20px] font-bold text-center lg:mb-20 mb-10">Key Features</h2>
 
       <Tabs defaultValue="application" className="max-w-6xl mx-auto">
         {/* Top Button Row */}
-        <TabsList className="flex justify-center gap-8 mb-8 bg-transparent">
+        <TabsList className="flex lg:flex-row flex-col justify-center lg:gap-8 gap-4 lg:mb-8 mb-4 bg-transparent">
           <TabsTrigger
             value="application"
             className="rounded-lg px-8 py-6 bg-gradient-to-b from-[#ffffff0d] border-t border-[#ffffff14] to-[#ffffff04] text-white  "
