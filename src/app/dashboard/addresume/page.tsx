@@ -21,11 +21,10 @@ export default function ResumeDrop() {
   }
 
   return (
-    <div className="max-w-md mx-auto mt-20 p-6 rounded-xl bg-gradient-to-b from-black/70 to-zinc-900 shadow-xl text-white space-y-6 border border-white/10">
+    <div className="max-w-xl mx-auto mt-20 p-6 rounded-lg shadow-xl text-white space-y-8 bg-gradient-to-t from-[#0c0c0c82] via-[#2f2f2f23] to-[#2929294f] border-t border-[#ffffff28]">
       <h2 className="text-xl font-bold text-center">Drop your resume. Find your fit.</h2>
 
       <div className="text-sm text-zinc-400">Add your document here</div>
-
       <label
         htmlFor="file-upload"
         className={cn(
@@ -35,7 +34,7 @@ export default function ResumeDrop() {
         <UploadCloud className="w-8 h-8 text-violet-300" />
         <p className="text-sm text-white">
           {fileName ? fileName : "Drop your file here,"}{" "}
-          <span className="text-pink-400 underline">or click to browse</span>
+          <span className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#A07DF1,#F69DBA)]">or click to browse</span>
         </p>
         <input
           id="file-upload"
@@ -45,13 +44,14 @@ export default function ResumeDrop() {
         />
       </label>
 
-      <Button
+      <div className='flex justify-center'><Button
         disabled={!fileName}
         onClick={handleContinue}
-        className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:opacity-90"
+        className="  px-6 py-4 bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] text-white hover:opacity-90"
       >
         Continue
-      </Button>
+      </Button></div>
+
     </div>
   )
 }
