@@ -28,7 +28,7 @@ export default function ResumeDrop() {
       <label
         htmlFor="file-upload"
         className={cn(
-          "flex flex-col items-center justify-center border border-dashed border-violet-400 rounded-lg px-6 py-10 cursor-pointer transition hover:bg-violet-950/30 text-center space-y-2"
+          "flex flex-col items-center justify-center border border-dashed border-violet-400 rounded-lg px-6 py-10 cursor-pointer transition hover:bg-[#ffffff08] text-center space-y-2"
         )}
       >
         <UploadCloud className="w-8 h-8 text-violet-300" />
