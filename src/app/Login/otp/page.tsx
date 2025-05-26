@@ -6,10 +6,11 @@ import {
     InputOTPSlot,
 } from "@/components/ui/input-otp"
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
+import SlicedImageGrid from "../../(components)/grid"
 
 export default function OTPPage() {
     return (
-        <div className="px-10 py-8 grid grid-cols-2 min-h-screen gap-10">
+        <div className="px-10 py-8 grid grid-cols-2 max-h-screen overflow-y-hidden gap-10">
             <div className="py-5 px-15 flex flex-col gap-20">
                 <div className="text-lg font-bold">Admission Jockey</div>
                 <div className="flex flex-col justify-center place-items-center gap-10">
@@ -51,7 +52,8 @@ export default function OTPPage() {
             </div>
 
 
-            <div className="bg-[linear-gradient(90deg,#F69DBA,#A07DF1)] rounded-lg">
+            <div className="hidden md:flex ">
+        <SlicedImageGrid/>
             </div>
         </div>
     )

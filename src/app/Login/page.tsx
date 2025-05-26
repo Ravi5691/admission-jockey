@@ -1,8 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
+import StyledGrid from "../(components)/grid";
+import ImageGrid from "../(components)/grid";
+import SlicedImageGrid from "../(components)/grid";
 
 export default function LoginPage() {
     return (
-        <div className="px-10 py-8 grid grid-cols-2 min-h-screen gap-10">
+        <div className="px-10 py-8 grid grid-cols-2 max-h-screen overflow-y-hidden gap-10">
             {/* Left Side */}
             <div className="py-5 px-15 flex flex-col gap-20">
                 <div className="text-lg font-bold">Admission Jockey</div>
@@ -55,7 +58,8 @@ export default function LoginPage() {
             </div>
 
             {/* Right Side */}
-            <div className="bg-[linear-gradient(90deg,#F69DBA,#A07DF1)] rounded-lg">
+            <div className="hidden md:flex ">
+        <SlicedImageGrid/>
             </div>
         </div>
     );
