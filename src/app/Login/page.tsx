@@ -5,25 +5,28 @@ import SlicedImageGrid from "../(components)/grid";
 
 export default function LoginPage() {
     return (
-        <div className="px-10 py-8 grid grid-cols-2 max-h-screen overflow-y-hidden gap-10">
+        <div className="lg:px-10 px-5 lg:py-8 py-5 grid lg:grid-cols-2 max-h-screen overflow-y-hidden gap-10">
             {/* Left Side */}
-            <div className="py-5 px-15 flex flex-col gap-20">
-                <div className="text-lg font-bold">Admission Jockey</div>
+            <div className="lg:py-5 lg:px-15 flex flex-col lg:gap-20">
+                <div className="lg:text-lg font-bold">
+                    <span className="lg:block hidden">Admission Jockey</span>
+                    <div className="lg:hidden block place-items-center w-full h-20 overflow-hidden"><img src="/logo.png" alt="Logo" className="w-full h-full object-cover" /></div>
+                </div>
                 <div className="flex flex-col justify-center place-items-center gap-10">
-                    <h1 className="text-3xl font-bold">Join AJ</h1>
-                    <Card className="border border-transparent w-3/4  text-center bg-opacity-30 rounded-lg">
+                    <h1 className="text-3xl font-bold">Join Alumna.ai</h1>
+                    <Card className="border border-transparent lg:w-3/4 w-full  text-center bg-opacity-30 rounded-lg">
                         <div className="p-[1px]  bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] rounded-lg">
                             <CardContent className="bg-black rounded-[10px] p-2 space-y-2">
                                 <span className="text-sm text-transparent bg-clip-text bg-[linear-gradient(90deg,#A07DF1,#F69DBA)]">Sign Up with Google</span>
                             </CardContent>
                         </div>
                     </Card>
-                    <div className="flex flex-row gap-2 w-3/4 justify-center items-center">
+                    <div className="flex flex-row gap-2 lg:w-3/4 w-full justify-center items-center">
                         <div className="h-[1px] w-1/2 bg-[radial-gradient(closest-side,#FFFFFF_20%,#FFFFFF_70%,transparent_100%)]" />
                         <h1>or</h1>
                         <div className="h-[1px] w-1/2 bg-[radial-gradient(closest-side,#FFFFFF_20%,#FFFFFF_70%,transparent_100%)]" />
                     </div>
-                    <div className="flex flex-col gap-10 w-3/4">
+                    <div className="flex flex-col gap-10 lg:w-3/4 w-full">
                         <form action="/Login/otp" method="get">
                             <div className="flex flex-col gap-3">
                                 <label htmlFor="email" className="text-white text-sm font-medium">
@@ -58,8 +61,8 @@ export default function LoginPage() {
             </div>
 
             {/* Right Side */}
-            <div className="hidden md:flex ">
-        <SlicedImageGrid/>
+            <div className="hidden lg:flex ">
+                <SlicedImageGrid />
             </div>
         </div>
     );

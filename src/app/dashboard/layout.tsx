@@ -8,13 +8,14 @@ export default function DashboardLayout({
 }>) {
   return (
     <div className="flex flex-col h-screen">
-      <header className=" text-white px-10 py-5">
+      <header className=" text-white lg:px-10 px-5 lg:py-5">
         <div className="flex  place-items-center justify-between">
             <div className="flex items-center justify-center gap-10">
-                <div className="mt-2"><DropMenu/></div>
-                <div className="text-lg font-bold">Alumna.ai</div>
+                <div className="lg:mt-2 mt-1"><DropMenu/></div>
+                <div className="text-lg font-bold lg:block hidden">Alumna.ai</div>
+                 <div className="lg:hidden block place-items-center w-100 h-20 overflow-hidden"><img src="/logo.png" alt="Logo" className="w-full h-full object-cover" /></div>
             </div>
-            <div className="flex items-center gap-6">
+            <div className=" items-center flex gap-6">
                 <button className="px-6 py-2 rounded-lg font-semibold text-white text-base 
                bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] 
                border-t border-[#ffffff36] 

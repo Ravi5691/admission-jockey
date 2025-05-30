@@ -48,7 +48,7 @@ const InputBar: React.FC<InputBarProps> = ({
                 value={inputValue}
                 onChange={handleInputChange}
                 placeholder={placeholder}
-                className='text-lg outline-none'
+                className='lg:text-lg text-sm outline-none'
                 style={{ flex: 1, padding: '8px', borderRadius: '4px' }}
             />
 
