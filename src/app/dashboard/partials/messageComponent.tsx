@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar } from "@radix-ui/react-avatar";
 import { AvatarFallback } from "@/components/ui/avatar";
 import AichatSvg from "./AichatSvg";
+import { Sparkle } from "lucide-react";
 interface pageProps {
   messages: Message[];
   messagesEndRef: React.RefObject<HTMLDivElement | null>;
@@ -31,7 +32,33 @@ export default function MessageComponent({
                 </AvatarFallback>
               </Avatar>
             ) : (
-              <AichatSvg />
+              <Avatar
+                className={`w-10 h-10 md:w-12 md:h-12 flex-shrink-0 rounded-full`}
+              >
+                <AvatarFallback className="text-white font-bold text-sm md:text-xl bg-transparent">
+                  <svg width="30" height="30" viewBox="0 0 25 25" fill="none">
+                    <defs>
+                      <linearGradient
+                        id="sparkleGradient"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1"
+                      >
+                        <stop
+                          offset="0%"
+                          stopColor="rgba(232, 125, 179, 0.5)"
+                        />
+                        <stop
+                          offset="100%"
+                          stopColor="rgba(140, 103, 226, 0.5)"
+                        />
+                      </linearGradient>
+                    </defs>
+                    <Sparkle stroke="url(#sparkleGradient)" />
+                  </svg>
+                </AvatarFallback>
+              </Avatar>
             )}
 
             <div className={`space-y-2`}>
