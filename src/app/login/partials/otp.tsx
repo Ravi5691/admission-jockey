@@ -17,8 +17,10 @@ interface pageProps {
 export default function OTPPage({ setOtp, onSubmit, ispending }: pageProps) {
   return (
     <>
-      <div className="py-5 md:px-15 px-2 flex flex-col gap-20">
-        <div className="text-lg font-bold">Admission Jockey</div>
+      <div className="py-5 md:px-15 px-0 flex flex-col gap-10 md:gap-20">
+        <div className=" mx-auto">
+          <img src="/logo.jpg" width={200} height={40} alt="" />
+        </div>
         <div className="flex flex-col justify-center place-items-center gap-10">
           <h1 className="text-3xl font-bold">Verify your Account</h1>
           <div className="flex flex-col gap-2 mt-5">
@@ -30,18 +32,9 @@ export default function OTPPage({ setOtp, onSubmit, ispending }: pageProps) {
                 onChange={(value) => setOtp(value)}
               >
                 <InputOTPGroup>
-                  <InputOTPSlot index={0} />
-                  <InputOTPSlot index={1} />
-                </InputOTPGroup>
-                <InputOTPSeparator />
-                <InputOTPGroup>
-                  <InputOTPSlot index={2} />
-                  <InputOTPSlot index={3} />
-                </InputOTPGroup>
-                <InputOTPSeparator />
-                <InputOTPGroup>
-                  <InputOTPSlot index={4} />
-                  <InputOTPSlot index={5} />
+                  {[0, 1, 2, 3, 4, 5].map((index) => {
+                    return <InputOTPSlot key={index} index={index} />;
+                  })}
                 </InputOTPGroup>
               </InputOTP>
 

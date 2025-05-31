@@ -28,9 +28,11 @@ export default function LoginPage() {
       {isOptSent ? (
         <OTPPage ispending={ispending} setOtp={setOtp} onSubmit={submitOtp} />
       ) : (
-        <div className="py-5 md:px-15   px-0 flex flex-col gap-20">
-          <div className="text-lg font-bold">Admission Jockey</div>
-          <div className="flex flex-col justify-center place-items-center gap-10">
+        <div className="py-5 md:px-15 px-0 flex flex-col gap-10 md-gap:20">
+          <div className=" mx-auto">
+            <img src="/logo.jpg" width={200} height={40} alt="" />
+          </div>
+          <div className="flex flex-col justify-center place-items-center gap-3 md:gap-10">
             <h1 className="text-3xl font-bold">Join Alumna.ai</h1>
             <Card className="border border-transparent w-3/4  text-center bg-opacity-30 rounded-lg">
               <div className="p-[1px]  bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] rounded-lg">
