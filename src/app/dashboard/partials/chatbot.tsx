@@ -104,8 +104,9 @@ export function ChatInterface() {
     return (
       <>
         {/* Welcome Content */}
-        <div className="flex-1 flex flex-col items-center justify-center px-4 pb-32">
-          <div className="text-center max-w-md mx-auto">
+
+        <div className="flex-1 flex flex-col justify-center gap-30 h-screen  px-4 pb-32">
+          <div className="text-center max-w-md mx-auto ">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
               Hey there <span className="text-purple-400">Aarav</span>!
             </h1>
@@ -115,48 +116,48 @@ export function ChatInterface() {
               How can I help you?
             </p>
           </div>
-        </div>
-
-        {/* Input Section */}
-        <div className="p-4 md:p-6">
-          <div className="w-full max-w-2xl mx-auto">
-            <div className="relative flex items-center gap-2 md:gap-3">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-gray-400 hover:text-white hover:bg-gray-800 p-2 md:p-3"
-              >
-                <Paperclip className="w-4 h-4 md:w-5 md:h-5" />
-              </Button>
-
-              <div className="relative flex-1">
-                <Input
-                  placeholder="Whats your next discovery?"
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  className="w-full bg-gray-800 border-gray-700 text-white placeholder-gray-400 pr-12 py-3 md:py-4 text-base md:text-lg rounded-xl md:rounded-2xl"
-                />
+          <div className="p-4 md:p-6">
+            <div className="w-full max-w-2xl mx-auto">
+              <div className="relative flex items-center gap-2 md:gap-3">
                 <Button
-                  onClick={handleSendMessage}
-                  disabled={!inputValue.trim()}
+                  variant="ghost"
                   size="sm"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-purple-600 hover:bg-purple-700 rounded-lg p-2"
+                  className="text-gray-400 hover:text-white hover:bg-gray-800 p-2 md:p-3"
                 >
-                  <Send className="w-4 h-4" />
+                  <Paperclip className="w-4 h-4 md:w-5 md:h-5" />
+                </Button>
+
+                <div className="relative flex-1">
+                  <Input
+                    placeholder="Whats your next discovery?"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    className="w-full bg-gray-800 border-gray-700 text-white placeholder-gray-400 pr-12 py-3 md:py-4 text-base md:text-lg rounded-xl md:rounded-2xl"
+                  />
+                  <Button
+                    onClick={handleSendMessage}
+                    disabled={!inputValue.trim()}
+                    size="sm"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-purple-600 hover:bg-purple-700 rounded-lg p-2"
+                  >
+                    <Send className="w-4 h-4" />
+                  </Button>
+                </div>
+
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-gray-400 hover:text-white hover:bg-gray-800 p-2 md:p-3"
+                >
+                  <Mic className="w-4 h-4 md:w-5 md:h-5" />
                 </Button>
               </div>
-
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-gray-400 hover:text-white hover:bg-gray-800 p-2 md:p-3"
-              >
-                <Mic className="w-4 h-4 md:w-5 md:h-5" />
-              </Button>
             </div>
           </div>
         </div>
+
+        {/* Input Section */}
       </>
     );
   }
@@ -164,7 +165,7 @@ export function ChatInterface() {
   return (
     <>
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 overflow-y-auto h-[85%] px-16 p-4 space-y-4">
         {messages.map((message) => (
           <div
             key={message.id}
