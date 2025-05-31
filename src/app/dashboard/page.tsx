@@ -32,10 +32,10 @@ export default function ChatInterface() {
       <>
         {/* Welcome Content */}
 
-        <div className="flex-1 flex flex-col justify-center gap-30 h-screen  px-4 pb-32">
+        <div className="flex-1 flex flex-col justify-center gap-30 h-screen w-3/4 mx-auto px-4 pb-32">
           <Welcome />
           <div className="p-4 md:p-6">
-            <div className="w-full max-w-3xl mx-auto">
+            <div className="w-full mx-auto">
               <InputBar
                 setMessages={setMessages}
                 hasStartedChat={hasStartedChat}
@@ -53,12 +53,12 @@ export default function ChatInterface() {
   return (
     <>
       {/* Messages */}
-      <div className="flex flex-col min-h-screen bg-black text-white">
+      <div className="flex flex-col min-h-screen bg-black text-white w-3/4 mx-auto">
         {/* Messages Area */}
         <MessageComponent messages={messages} messagesEndRef={messagesEndRef} />
         {/* Input */}
         <div className="border-t border-gray-800 p-4 bg-black sticky bottom-10 md:bottom-0">
-          <div className="w-full max-w-3xl mx-auto">
+          <div className="w-full  mx-auto">
             <InputBar
               setMessages={setMessages}
               hasStartedChat={hasStartedChat}

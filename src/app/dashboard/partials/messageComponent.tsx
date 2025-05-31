@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Avatar } from "@radix-ui/react-avatar";
 import { AvatarFallback } from "@/components/ui/avatar";
+import AichatSvg from "./AichatSvg";
 interface pageProps {
   messages: Message[];
   messagesEndRef: React.RefObject<HTMLDivElement | null>;
@@ -13,34 +14,27 @@ export default function MessageComponent({
   messagesEndRef,
 }: pageProps) {
   return (
-    <div className="flex-1 overflow-y-auto px-4 md:px-16  py-20 space-y-4">
+    <div className="flex-1  overflow-y-auto px-4 md:px-16  py-20 space-y-4">
       {messages.map((message) => (
-        <div
-          key={message.id}
-          className={`flex ${
-            message.sender === "user" ? "justify-end" : "justify-start"
-          }`}
-        >
-          <div
-            className={`flex gap-2 md:gap-3 max-w-[85%] md:max-w-[80%] ${
-              message.sender === "user" ? "flex-row-reverse" : ""
-            }`}
-          >
-            <Avatar
-              className={`w-7 h-7 md:w-8 md:h-8 flex-shrink-0 ${
-                message.sender === "user" ? "bg-blue-600" : "bg-purple-600"
-              }`}
-            >
-              <AvatarFallback className="text-white text-xs md:text-sm">
-                {message.sender === "user" ? "A" : "AI"}
-              </AvatarFallback>
-            </Avatar>
+        <div key={message.id} className="flex justify-start py-2">
+          <div className={`flex gap-2 md:gap-3 max-w-[85%] md:max-w-[80%]`}>
+            {message.sender === "user" ? (
+              <Avatar
+                className={`w-10 h-10 md:w-12 md:h-12 flex-shrink-0 rounded-full`}
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(232, 125, 179, 0.5) 0%, rgba(140, 103, 226, 0.5) 100%)",
+                }}
+              >
+                <AvatarFallback className="text-white font-bold text-sm md:text-xl bg-transparent">
+                  {message.sender === "user" ? "A" : "AI"}
+                </AvatarFallback>
+              </Avatar>
+            ) : (
+              <AichatSvg />
+            )}
 
-            <div
-              className={`space-y-2 ${
-                message.sender === "user" ? "text-right" : ""
-              }`}
-            >
+            <div className={`space-y-2`}>
               <div
                 className={`inline-block p-3 md:p-4 rounded-lg text-sm md:text-base leading-relaxed ${
                   message.sender === "user"
