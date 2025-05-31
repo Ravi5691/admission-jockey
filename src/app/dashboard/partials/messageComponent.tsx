@@ -32,33 +32,33 @@ export default function MessageComponent({
                 </AvatarFallback>
               </Avatar>
             ) : (
-              <Avatar
-                className={`w-10 h-10 md:w-12 md:h-12 flex-shrink-0 rounded-full`}
-              >
-                <AvatarFallback className="text-white font-bold text-sm md:text-xl bg-transparent">
-                  <svg width="30" height="30" viewBox="0 0 25 25" fill="none">
-                    <defs>
-                      <linearGradient
-                        id="sparkleGradient"
-                        x1="0"
-                        y1="0"
-                        x2="0"
-                        y2="1"
-                      >
-                        <stop
-                          offset="0%"
-                          stopColor="rgba(232, 125, 179, 0.5)"
-                        />
-                        <stop
-                          offset="100%"
-                          stopColor="rgba(140, 103, 226, 0.5)"
-                        />
-                      </linearGradient>
-                    </defs>
-                    <Sparkle stroke="url(#sparkleGradient)" />
-                  </svg>
-                </AvatarFallback>
-              </Avatar>
+              <div className="rounded-full flex items-center justify-center h-12 w-14 text-sm p-[1px] bg-[linear-gradient(90deg,#A07DF1,#F69DBA)]">
+                <Avatar className="rounded-full h-full w-full bg-black flex justify-center items-center">
+                  <AvatarFallback className="text-white font-bold text-sm md:text-xl bg-transparent">
+                    <svg width="30" height="30" viewBox="0 0 25 25" fill="none">
+                      <defs>
+                        <linearGradient
+                          id="sparkleGradient"
+                          x1="0"
+                          y1="0"
+                          x2="0"
+                          y2="1"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="rgba(232, 125, 179, 0.5)"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="rgba(140, 103, 226, 0.5)"
+                          />
+                        </linearGradient>
+                      </defs>
+                      <Sparkle stroke="url(#sparkleGradient)" />
+                    </svg>
+                  </AvatarFallback>
+                </Avatar>
+              </div>
             )}
 
             <div className={`space-y-2`}>
