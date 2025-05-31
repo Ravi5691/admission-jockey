@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
-import InputBar from "@/app/(components)/inputBar";
+import InputBar from "@/app/dashboard/partials/inputBar";
 
 const AlumniCard = () => (
     <Card className="bg-gradient-to-b from-[#111] to-[#000] border border-zinc-800 text-white rounded-xl shadow-md">

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import InputBar from "./(components)/inputBar";
+import InputBar from "./dashboard/partials/inputBar";
 import HowAjWork from "./HomeComponents/howAjWork";
 import Faq from "./HomeComponents/faqs";
 import KeyFeatures from "./HomeComponents/features";
@@ -19,7 +19,7 @@ export default function Home() {
             built to help students discover the right colleges, courses, internships, and
             career paths with hyper-personalized guidance.</span>
           <div className="lg:w-3/4">
-            <InputBar />
+            <InputBar  />
           </div>
         </div>
         <div className="flex flex-1 lg:justify-end ">

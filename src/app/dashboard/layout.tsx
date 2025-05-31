@@ -9,8 +9,7 @@ import {
   User,
 } from "lucide-react";
 import UserDropDown from "./partials/userDropdone";
-import { ChatInterface } from "./partials/chatbot";
-import { Input } from "@/components/ui/input";
+
 
 export default function DashboardLayout({
   children,
