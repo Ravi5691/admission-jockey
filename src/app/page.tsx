@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="lg:px-20 px-5 overflow-x-hidden">
       <Navbar />
-      <div className="flex lg:flex-row flex-col-reverse item-center justify-between lg:my-20 max-h-screen gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:my-20 md:max-h-screen gap-5">
         <div className="flex flex-col flex-1 justify-center lg:gap-10 gap-4">
           <h1 className="lg:text-[40px] text-[20px] tracking-wide lg:leading-13 leading-6 font-semibold">Your AI-Powered Guide to <span className="text-transparent  bg-clip-text bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] ">Education</span>, <span className="text-transparent  bg-clip-text bg-[linear-gradient(90deg,#A07DF1,#F69DBA)]">Careers</span> & <span className="text-transparent  bg-clip-text bg-[linear-gradient(90deg,#A07DF1,#F69DBA)]">Everything</span> in Between</h1>
           <span className="text-left  lg:text-base text-[10px]  lg:w-3/4">Alumna.ai is India’s first dedicated AI foundation model for EdTech — <br />

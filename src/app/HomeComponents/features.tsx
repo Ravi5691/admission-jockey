@@ -7,26 +7,26 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function KeyFeatures() {
   return (
     <section className="bg-black text-white min-h-screen py-16 ">
-      <h2 className="lg:text-4xl text-[20px] font-bold text-center lg:mb-20 mb-10">Key Features</h2>
+      <h2 className="md:text-4xl text-2xl font-bold text-center lg:mb-20 mb-10">Key Features</h2>
 
       <Tabs defaultValue="application" className="max-w-6xl mx-auto">
         {/* Top Button Row */}
-        <TabsList className="flex lg:flex-row flex-col justify-center lg:gap-8 gap-4 lg:mb-8 mb-4 bg-transparent">
+        <TabsList className="flex justify-center md:gap-8 gap-1 md:mb-8 mb-4 bg-transparent">
           <TabsTrigger
             value="application"
-            className="rounded-lg px-8 py-6 bg-gradient-to-b from-[#ffffff0d] border-t border-[#ffffff14] to-[#ffffff04] text-white  "
+            className="rounded-lg px-2 md:px-8 py-4 md:py-6 bg-gradient-to-b from-[#ffffff0d] border-t border-[#ffffff14] to-[#ffffff04] text-white  "
           >
             Application Builder
           </TabsTrigger>
           <TabsTrigger
             value="dates"
-            className="rounded-lg px-8 py-6 bg-gradient-to-b from-[#ffffff0d] border-t border-[#ffffff14] to-[#ffffff04] text-white "
+            className="rounded-lg px-2 md:px-8 py-4 md:py-6 bg-gradient-to-b from-[#ffffff0d] border-t border-[#ffffff14] to-[#ffffff04] text-white "
           >
             Important Dates
           </TabsTrigger>
           <TabsTrigger
             value="alumni"
-            className="rounded-lg px-8 py-6 bg-gradient-to-b from-[#ffffff0d] border-t border-[#ffffff14] to-[#ffffff04] text-white"
+            className="rounded-lg px-2 md:px-8 py-4 md:py-6 bg-gradient-to-b from-[#ffffff0d] border-t border-[#ffffff14] to-[#ffffff04] text-white"
           >
             Meet the Alumni
           </TabsTrigger>
