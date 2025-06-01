@@ -3,24 +3,66 @@ import { Card, CardContent } from "@/components/ui/card";
 // import StyledGrid from "../(components)/grid";
 // import ImageGrid from "../(components)/grid";
 import SlicedImageGrid from "../(components)/grid";
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import OTPPage from "./partials/otp";
 import { Button } from "@/components/ui/button";
 import { Loader } from "lucide-react";
+import { useSupabase } from "@/services/supabase/supabase.hook";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
   const [isOptSent, setIsOptSent] = useState(false);
-  const [otp, setOtp] = useState<string | null>(null);
-  const [sendingOpt, startTransition] = useTransition();
-  const [ispending, startSubmitTransition] = useTransition();
+  const [otp, setOtp] = useState<string | null>("");
+  const [ispending, startTransition] = useTransition();
+  // const [ispending, startSubmitTransition] = useTransition();
+  const [email, setEmail] = useState("");
+
+  const { supabase,  refreshSession } = useSupabase();
+
+  const router = useRouter();
 
   function sendOtp() {
     startTransition(async () => {
-      setIsOptSent(true);
+      try {
+        const { data, error } = await supabase.auth.signInWithOtp({
+          email,
+          options: {
+            shouldCreateUser: false,
+          },
+        });
+        if (error) {
+          console.error(error.message);
+        } else {
+          console.log(data);
+          setIsOptSent(true);
+        }
+      } catch (error) {
+        console.error(error);
+      }
     });
   }
 
-  function submitOtp() {}
+  function submitOtp() {
+    startTransition(async () => {
+      if (!otp || otp?.length < 5) return;
+      try {
+        const { data, error } = await supabase.auth.verifyOtp({
+          email,
+          token: otp,
+          type: "email",
+        });
+        if (data) {
+          console.log(data);
+          await refreshSession();
+          // toast.success("Loggged In successfully");
+          router.push("/dashboard");
+          console.log("email verification done ");
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    });
+  }
 
   return (
     <div className="md:px-10 py-8 px-2 grid md:grid-cols-2 grid-cols-1 max-h-screen overflow-y-hidden gap-10">
@@ -49,7 +91,7 @@ export default function LoginPage() {
               <div className="h-[1px] w-1/2 bg-[radial-gradient(closest-side,#FFFFFF_20%,#FFFFFF_70%,transparent_100%)]" />
             </div>
             <div className="flex flex-col gap-10 w-3/4">
-              <form action="/Login/otp" method="get">
+              <form onSubmit={(e) => e.preventDefault()}>
                 <div className="flex flex-col gap-3">
                   <label
                     htmlFor="email"
@@ -62,6 +104,8 @@ export default function LoginPage() {
                   <input
                     id="email"
                     type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
                     className="w-full px-4 py-3 bg-gradient-to-b from-[#ffffff0d] border-t border-[#ffffff14] to-[#ffffff04] rounded-lg"
                   />
@@ -73,10 +117,10 @@ export default function LoginPage() {
                   type="submit"
                   className="w-full py-3 mt-7 text-white font-semibold rounded-md 
                       bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] hover:brightness-110 hover:text-shadow active:scale-95 transition-all duration-200"
-                  disabled={sendingOpt}
+                  disabled={ispending}
                   onClick={sendOtp}
                 >
-                  {sendingOpt ? (
+                  {ispending ? (
                     <>
                       <Loader className="animate-spin" size={20} />
                       {"Sending Otp"}

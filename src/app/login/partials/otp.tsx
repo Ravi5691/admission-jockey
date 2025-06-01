@@ -24,7 +24,10 @@ export default function OTPPage({ setOtp, onSubmit, ispending }: pageProps) {
         <div className="flex flex-col justify-center place-items-center gap-10">
           <h1 className="text-3xl font-bold">Verify your Account</h1>
           <div className="flex flex-col gap-2 mt-5">
-            <form action="/dashboard" className="flex flex-col gap-3">
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="flex flex-col gap-3"
+            >
               <span className="font-bold">OTP</span>
               <InputOTP
                 maxLength={6}
@@ -39,6 +42,7 @@ export default function OTPPage({ setOtp, onSubmit, ispending }: pageProps) {
               </InputOTP>
 
               <Button
+                onClick={onSubmit}
                 className="w-full py-3 mt-7 text-white font-semibold rounded-md 
                           bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] hover:brightness-110 hover:text-shadow active:scale-95 transition-all duration-200"
               >

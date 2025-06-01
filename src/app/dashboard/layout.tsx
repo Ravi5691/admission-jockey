@@ -1,21 +1,27 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import DropMenu from "./dropmenu/page";
-import {
-  BellRing,
-  MessageCirclePlus,
-  Mic,
-  Paperclip,
-  Send,
-  User,
-} from "lucide-react";
+import { BellRing, User } from "lucide-react";
 import UserDropDown from "./partials/userDropdone";
-
+import { useSupabase } from "@/services/supabase/supabase.hook";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { DropdownMenuDemo } from "./partials/userDropDown";
+import Loader from "@/components/ui/loader";
 
 export default function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { isLoading, authorised } = useSupabase({
+    required: true,
+    redirect: "/login",
+    role: ["authenticated"],
+  });
+
+  if (isLoading || !authorised) return <Loader />;
+
   return (
     <div className="flex flex-col h-screen bg-black text-white">
       {/* Header for mobile */}
@@ -43,9 +49,9 @@ export default function DashboardLayout({
                 <BellRing className="h-[18px] text-[#f2acc3] " />
               </div>
             </button>
-            <button className="rounded-full h-10 w-10 bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] flex items-center justify-center  ">
-              <User />
-            </button>
+            <div className="rounded-full h-10 w-10 bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] flex items-center justify-center  ">
+              <DropdownMenuDemo />
+            </div>
           </div>
 
           <div className="md:hidden flex">
