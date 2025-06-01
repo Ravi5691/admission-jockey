@@ -11,11 +11,6 @@ export default function DashboardPage() {
             <div className="lg:w-6xl w-full fixed lg:bottom-8 bottom-0 lg:left-auto left-1">
              <InputBar 
               showMicButton={true}
-              // customButton={
-              //   <button>
-              //     <SendHorizontal size={20} color="#fff" />
-              //   </button>
-              // }
               />
              </div>
             
