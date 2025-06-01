@@ -18,13 +18,8 @@ export default function Home() {
           <span className="text-left  lg:text-base text-[17px]  lg:w-3/4 lg:mt-0 mt-5 ">Alumna.ai is India’s first dedicated AI foundation model for EdTech — <br className="lg:block hidden" />
             built to help students discover the right colleges, courses, internships, and
             career paths with hyper-personalized guidance.</span>
-<<<<<<< HEAD
-          <div className="lg:w-3/4 lg:mt-0 mt-13">
-            <InputBar />
-=======
           <div className="lg:w-3/4">
             <InputBar  />
->>>>>>> origin/dev
           </div>
         </div>
         <div className=" lg:flex flex-1 lg:justify-end hidden ">

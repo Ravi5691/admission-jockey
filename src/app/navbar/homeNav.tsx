@@ -4,7 +4,7 @@ const Navbar: React.FC = () => {
     return (
         <nav className=" lg:py-8 py-4 text-white flex justify-between items-center">
             <div className="lg:text-lg text-sm lg:font-bold font-medium">Admission Jockey</div>
-            <a href="/login">
+            <a href="/Login">
                 <button className="lg:px-6 lg:py-2 px-4 py-1 lg:rounded-lg rounded-sm font-semibold text-white lg:text-base text-[10px] 
                bg-[linear-gradient(90deg,#A07DF1,#F69DBA)] 
                border-t border-[#ffffff36] 
