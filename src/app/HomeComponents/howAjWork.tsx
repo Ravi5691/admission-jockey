@@ -27,7 +27,7 @@ export default function HowAjWork() {
         <div>
             <div className="flex flex-col items-center justify-center gap-5 mb-10">
                 <h1 className="lg:text-[40px] text-[20px] tracking-wide leading-13 font-semibold">How Alumna.ai Works</h1>
-                <span className="lg:text-base text-[12px] text-center">Built for Indian students. Backed by AI. Designed to give you answers that actually help — no  <br />agendas, no ads, no noise.</span>
+                <span className="lg:text-base text-[16px] text-center">Built for Indian students. Backed by AI. Designed to give you answers that actually help — no  <br />agendas, no ads, no noise.</span>
             </div>
             <div className="flex lg:flex-row flex-col items-center justify-between gap-5">
                 <div className="px-10">
