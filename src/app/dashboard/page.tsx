@@ -1,18 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
-export default function DashboardPage() {
-      return (
-        <div className="flex flex-col items-center justify-center w-full max-h-screen lg:px-20 relative">
-            <div className=" flex flex-col items-center h-[500px] justify-center tracking-wide gap-5 my-4">
-              <h1 className="text-5xl font-bold">Hey there <span className="text-transparent bg-clip-text bg-[linear-gradient(90deg,#F69DBA,#A07DF1)]">Aarav</span>! </h1>
-              <span className="text-center text-2xl">I’m here to make things easier for you. <br />How can I help you?</span>
-            </div>
-
-            <div className="lg:w-6xl w-full fixed lg:bottom-8 bottom-0 lg:left-auto left-1">
-             <InputBar 
-              showMicButton={true}
-=======
 import type React from "react";
 import { useState, useRef, useEffect } from "react";
 import { Send, Mic, Paperclip, MoreHorizontal } from "lucide-react";
@@ -53,7 +40,6 @@ export default function ChatInterface() {
                 setMessages={setMessages}
                 hasStartedChat={hasStartedChat}
                 setHasStartedChat={setHasStartedChat}
->>>>>>> origin/dev
               />
             </div>
           </div>
